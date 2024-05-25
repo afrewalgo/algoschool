@@ -1,0 +1,51 @@
+.exit-btn {
+    display: inline-flex;
+    margin: 10px;
+    text-decoration: none;
+    position: relative;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 12px 30px;
+    color: #FFF;
+    font-weight: bold;
+    text-transform: uppercase; 
+    font-family: 'Roboto', Тahoma, sans-serif;
+    background: #388E3C;
+    cursor: pointer; 
+    border: 2px solid #BFE2FF;
+    overflow: hidden;
+    z-index: 1;
+    text-decoration: none;
+    text-align: center;
+    transition-property: transform;
+    transition-duration: .5s;
+    transform: scale(1);
+}
+.exit-btn:hover{
+    transition-property: transform;
+    transition-duration: .5s;
+    transform: scale(1.1);
+}
+.exit-btn:active,
+.exit-btn:focus {
+    color: #FFF;
+}
+.exit-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: -50px;
+    bottom: 0;
+    left: 0;
+    border-right: 50px solid transparent;
+    border-top: 50px solid #008000;
+    transition: transform 0.5s;
+    transform: translateX(-100%);
+    z-index: -1;
+}
+.exit-btn:hover:before,
+.exit-btn:active:before,
+.exit-btn:focus:before {
+    transform: translateX(0);
+}
+
